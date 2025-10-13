@@ -1,0 +1,13 @@
+name: snake_spider_classifier
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - typer
+  - loguru
+  - tqdm
+  - ruff
+  - pip:
+    - python-dotenv
+    - -e .
