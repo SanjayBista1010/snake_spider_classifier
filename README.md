@@ -92,11 +92,56 @@ Environment includes: PyTorch, torchvision, NumPy, Pandas, Scikit-learn, tqdm.
     5️⃣ CSV Logging - Tracks train/val accuracy, loss, learning rate, best accuracy, trainable/frozen parameters & layers per epoch
 
 
-##  🚀 Training
+## 🚀 Training
 
 To train the model:
+bash
 
     python -m snake_spider_classifier.modeling.train
+
+Training Scale:
+
+- 34,000 total images
+
+- 27,200 training images
+
+- 6,800 validation images
+
+- 50 epochs with advanced augmentation
+
+## 🌐 Web App
+Streamlit App (Recommended)
+
+Try the live classification web app:
+
+[🐍🕷️ Snake vs Spider Classifier Web App](https://snakespiderclassifier-r8szaq6993lwfdurucxjgb.streamlit.app/)
+
+The web app allows you to:
+
+- Upload snake or spider images
+
+- Get real-time predictions
+
+- See confidence scores
+
+- Test the model easily without any setup
+
+# Local Flask App
+
+Run the Flask app locally:
+bash
+
+    python flask_app.py
+
+The Flask app will start a local server at http://localhost:5000 and provides:
+
+- Web interface for image classification
+
+- REST API endpoints
+
+- File upload functionality
+
+- Real-time predictions
 
 ##  📊 Results
 
