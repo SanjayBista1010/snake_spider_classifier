@@ -35,6 +35,9 @@ data/raw/
 # Jupyter
 .ipynb_checkpoints/
 
+# Allow CSV files
+!reports/*.csv
+
 # IDEs
 .vscode/
 .idea/
