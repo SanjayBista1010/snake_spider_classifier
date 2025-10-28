@@ -55,10 +55,10 @@ The performance of the Snake vs Spider Classifier on the test dataset is as foll
 ```text
                precision    recall  f1-score   support
 
-           0       0.99      0.99      0.99      3398
-           1       1.00      0.99      0.99      3584
+           0        0.99      0.99      0.99      3398
+           1        1.00      0.99      0.99      3584
 
-    accuracy                           0.99      6982
+    accuracy                            0.99      6982
     macro avg       0.99      0.99      0.99      6982
  weighted avg       0.99      0.99      0.99      6982
 ```
