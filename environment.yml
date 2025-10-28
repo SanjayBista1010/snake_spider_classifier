@@ -1,13 +1,25 @@
-name: snake_spider_classifier
+name: snake_spider_classifier_universal
 channels:
+  - defaults
   - conda-forge
+  - nvidia
 dependencies:
   - python=3.10
   - pip
-  - typer
-  - loguru
-  - tqdm
-  - ruff
+  - numpy=1.26.4
+  - pandas=2.3.3
+  - scikit-learn=1.7.2
+  - scipy=1.15.3
+  - matplotlib=3.10.7
+  - seaborn=0.13.2
+  - pillow=10.0.0
   - pip:
-    - python-dotenv
-    - -e .
+      - Flask==2.3.3
+      - tqdm==4.67.1
+      - loguru==0.7.3
+      - python-dotenv==1.1.1
+      - requests
+      # PyTorch CPU/GPU auto-selection
+      - torch
+      - torchvision
+      - torchaudio

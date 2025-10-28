@@ -1,0 +1,59 @@
+├── LICENSE
+├── Makefile
+├── README.md
+├── app/
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── static/
+│   │   ├── css/
+│   │   │   └── style.css
+│   │   └── js/
+│   │       └── script.js
+│   └── templates/
+│       ├── base.html
+│       ├── index.html
+│       └── result.html
+├── data/
+│   ├── external/
+│   ├── interim/
+│   ├── processed/
+│   └── raw/
+│       ├── snake/
+│       └── spider/
+├── docs/
+├── environment.yml
+├── flask_app.py
+├── logs/
+├── models/
+│   └── vgg16_se.py
+├── notebooks/
+│   └── snake-spider-classifier.ipynb
+├── project_structure.txt
+├── pyproject.toml
+├── references/
+├── reports/
+│   ├── checkpoint.pth
+│   ├── figures/
+│   │   ├── accuracy_curve.png
+│   │   ├── learning_rate_curve.png
+│   │   └── train_loss_curve.png
+│   ├── training_metrics.csv
+│   ├── vgg16_se_checkpoint.pth
+│   └── vgg16_se_swa_final.pth
+├── requirements.txt
+├── snake_spider_classifier/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── configs/
+│   │   ├── __init__.py
+│   │   ├── exceptions.py
+│   │   └── logger.py
+│   ├── dataset.py
+│   ├── features.py
+│   ├── metrics_tracker.py
+│   ├── modeling/
+│   │   ├── __init__.py
+│   │   ├── predict.py
+│   │   └── train.py
+│   └── plots.py
+└── structure_export.py

@@ -1,0 +1,71 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+}
+
+.result-image {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.prediction-card {
+    transition: transform 0.2s;
+}
+
+.prediction-card:hover {
+    transform: translateY(-2px);
+}
+
+.confidence-high {
+    color: #198754;
+    font-weight: bold;
+}
+
+.confidence-medium {
+    color: #fd7e14;
+    font-weight: bold;
+}
+
+.confidence-low {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.probability-bar {
+    height: 8px;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+.snake-prob {
+    background: linear-gradient(90deg, #198754, #20c997);
+}
+
+.spider-prob {
+    background: linear-gradient(90deg, #dc3545, #fd7e14);
+}
+
+.upload-area {
+    border: 2px dashed #dee2e6;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    background: #f8f9fa;
+    transition: all 0.3s;
+}
+
+.upload-area:hover {
+    border-color: #0d6efd;
+    background: #e7f1ff;
+}
+
+.upload-area.dragover {
+    border-color: #0d6efd;
+    background: #e7f1ff;
+}

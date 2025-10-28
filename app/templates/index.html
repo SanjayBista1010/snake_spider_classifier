@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">🐍🕷️ Snake vs Spider Classifier</h4>
+                <small class="opacity-75">98.68% Accuracy Custom VGG16 + SE Blocks</small>
+            </div>
+            <div class="card-body">
+                <p class="lead">Upload an image to classify it as a snake or spider using our AI model trained with MixUp, CutMix, and SWA.</p>
+                
+                <!-- Model Status Card -->
+                <div class="card mb-4 border-success" id="modelStatusCard">
+                    <div class="card-body">
+                        <h6 class="card-title">Model Status</h6>
+                        <span class="badge bg-success" id="statusBadge">✅ Loading...</span>
+                        <small class="text-muted d-block mt-1" id="statusDetails">
+                            Checking model status...
+                        </small>
+                    </div>
+                </div>
+
+                <!-- Single Image Upload -->
+                <div class="mb-4">
+                    <h5>Single Image Classification</h5>
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="fileInput" class="form-label">Choose an image</label>
+                            <input type="file" class="form-control" id="fileInput" accept="image/*" required>
+                            <div class="form-text">Supported formats: JPG, PNG, GIF, BMP</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="predictBtn" disabled>
+                            <span class="spinner-border spinner-border-sm d-none" id="loadingSpinner"></span>
+                            Classify Image
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Batch Upload -->
+                <div class="mb-4">
+                    <h5>Batch Classification</h5>
+                    <form id="batchUploadForm" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="batchFileInput" class="form-label">Choose multiple images</label>
+                            <input type="file" class="form-control" id="batchFileInput" accept="image/*" multiple required>
+                            <div class="form-text">Max 10 images, supported formats: JPG, PNG, GIF, BMP</div>
+                        </div>
+                        <button type="submit" class="btn btn-success" id="batchPredictBtn" disabled>
+                            <span class="spinner-border spinner-border-sm d-none" id="batchLoadingSpinner"></span>
+                            Classify Multiple Images
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Results Section -->
+                <div id="results" class="mt-4" style="display: none;">
+                    <h5>Classification Results</h5>
+                    <div id="resultContent"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Model Architecture Info -->
+        <div class="card mt-4">
+            <div class="card-header bg-dark text-white">
+                <h6 class="mb-0">Model Architecture</h6>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li>✅ <strong>Custom VGG16</strong> with Squeeze-Excitation Blocks</li>
+                    <li>✅ <strong>98.68% Validation Accuracy</strong> on test data</li>
+                    <li>✅ Trained with <strong>MixUp & CutMix</strong> augmentation</li>
+                    <li>✅ Uses <strong>Stochastic Weight Averaging (SWA)</strong></li>
+                    <li>✅ <strong>Gradual unfreezing</strong> with layer-wise learning rates</li>
+                    <li>✅ <strong>50 epochs</strong> of optimized training</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Performance Metrics -->
+        <div class="card mt-4">
+            <div class="card-header bg-info text-white">
+                <h6 class="mb-0">Performance Metrics</h6>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <h4 class="text-success">98.68%</h4>
+                        <small class="text-muted">Best Validation Accuracy</small>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="text-primary">98.64%</h4>
+                        <small class="text-muted">Final Validation Accuracy</small>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="text-warning">81.78%</h4>
+                        <small class="text-muted">Training Accuracy</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
