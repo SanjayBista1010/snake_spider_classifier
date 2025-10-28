@@ -46,7 +46,22 @@ Here's a snapshot of **training results over 50 epochs**:
 | 30    | 85.21         | 94.93       | 0.0001        | 95.30            | 68               |
 | 50    | 81.78         | 98.64       | 4.90E-06      | 98.68            | 68               |
 
-> Maximum validation accuracy achieved: **98.68%**  
+> Maximum validation accuracy achieved: **98.68%**
+
+## 📊 Classification Report
+
+The performance of the Snake vs Spider Classifier on the test dataset is as follows:
+
+```text
+               precision    recall  f1-score   support
+
+           0       0.99      0.99      0.99      3398
+           1       1.00      0.99      0.99      3584
+
+    accuracy                           0.99      6982
+    macro avg       0.99      0.99      0.99      6982
+ weighted avg       0.99      0.99      0.99      6982
+```
 
 ## 📂 Dataset Structure
 data/raw/
