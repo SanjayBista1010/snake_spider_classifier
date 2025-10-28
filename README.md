@@ -23,13 +23,14 @@ A **deep learning project** for classifying images of **snakes** and **spiders**
 - **Model:** Custom VGG16 + SE blocks  
 - **Input size:** 224 × 224 images  
 - **Number of classes:** 2 (Snake, Spider)  
+- **Dataset:** 34,000 images (17,000 per class)
 - **Data augmentation:** Random horizontal flip, rotation, perspective, color jitter, affine transforms, Random Erasing  
 - **Advanced training:**  
   - MixUp and CutMix  
   - Gradual layer-wise fine-tuning  
   - Layer-wise learning rate ramp-up  
   - SWA for final model  
-- **Training metrics logged:** Train loss, train/val accuracy, learning rate, best validation accuracy, frozen/trainable layers & parameters per epoch  
+- **Training metrics logged:** Train loss, train/val accuracy, learning rate, best validation accuracy, frozen/trainable layers & parameters per epoch 
 
 ---
 
