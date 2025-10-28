@@ -8,9 +8,13 @@ A **deep learning project** for classifying images of **snakes** and **spiders**
 
 ---
 
-## 🔗 Colab Demo
+## 🔗 Live Demos
 
-[Open in Google Colab](https://colab.research.google.com/drive/1WwaLVpm7ENUtUU1iWtY1-_8omTFOhD2A)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1WwaLVpm7ENUtUU1iWtY1-_8omTFOhD2A)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://snakespiderclassifier-r8szaq6993lwfdurucxjgb.streamlit.app/)
+
+- **Colab Notebook**: Run the full training pipeline
+- **Streamlit Web App**: Test the model with your own images
 
 ---
 
