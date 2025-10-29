@@ -66,10 +66,15 @@ The performance of the Snake vs Spider Classifier on the test dataset is as foll
 ## 📂 Dataset Structure
 data/raw/
 ├── snake/
+
 │ ├── snake1.jpg
+
 │ └── ...
+
 └── spider/
+
 ├── spider1.jpg
+
 └── ...
 
 
